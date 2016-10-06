@@ -1,0 +1,20 @@
+/* 
+    Created on : Oct 12, 2015, 8:56:56 PM
+    Author     : Eshan
+*/
+#centered {
+	position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+}
+#content {
+	width: 100%;
+}
+
+#updateVersion {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

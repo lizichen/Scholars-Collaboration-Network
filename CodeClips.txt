@@ -1,0 +1,13 @@
+// From coauth.php Line 30
+    //      Calculate progress bar percentage
+    //    $percent = intval($j / count($auth) * 100) . "%";
+    //      Update progress bar
+    //                echo '<script language="javascript">
+    //                    document.getElementById("progress").innerHTML="<div style=\"width:' . $percent . ';background-color:#009900;\">&nbsp;</div>";
+    //                    document.getElementById("information").innerHTML="' . $j . ' author(s) processed. ' . $mcount . ' author(s) matched.";
+    //                    </script>';
+    ////      This is for the buffer achieve the minimum size in order to flush data
+    //    echo str_repeat(' ', 1024 * 64);
+    ////      Send output to browser immediately
+    //    flush();
+    //      Initialize variables
