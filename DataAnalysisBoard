@@ -1,70 +1,43 @@
-{
-@_fa: "true",
-link: [
-{
-@_fa: "true",
-@href: "https://api.elsevier.com/content/article/pii/S1365182X16318378",
-@ref: "self"
-},
-{
-@_fa: "true",
-@href: "http://www.sciencedirect.com/science/article/pii/S1365182X16318378",
-@ref: "scidir"
-}
-],
-dc:identifier: "DOI:10.1016/j.hpb.2016.07.015",
-eid: "1-s2.0-S1365182X16318378",
-prism:url: "https://api.elsevier.com/content/article/pii/S1365182X16318378",
-dc:title: "Preoperative risk factors for conversion from laparoscopic to open cholecystectomy: a validated risk score derived from a prospective U.K. database of 8820 patients",
-dc:creator: "Robert P., Sutcliffe",
-dc:description: "Abstract BackgroundLaparoscopic cholecystectomy is commonly performed, and several factors increase the risk of open conversion, prolonging operating time and hospital stay. Preoperative stratification would improve consent, scheduling and identify appropriate training cases. The aim of this study was to develop a validated risk score for conversion for use in clinical practice. Patients and methodsPreoperative patient and disease-related variables were identified from a prospective cholecystectomy database (CholeS) of 8820 patients, divided into main and validation sets. Preoperative predictors of conversion were identified by multivariable binary logistic regression. A risk score was developed and validated using a forward stepwise approach. ResultsSome 297 procedures (3.4%) were converted. The risk score was derived from six significant predictors: age (p = 0.005), sex (p < 0.001), indication for surgery (p < 0.001), ASA (p < 0.001), thick-walled gallbladder (p = 0.040) and CBD diameter (p = 0.004). Testing the score on the validation set yielded an AUROC = 0.766 (p < 0.001), and a score >6 identified patients at high risk of conversion (7.1% vs. 1.2%). ConclusionThis validated risk score allows preoperative identification of patients at six-fold increased risk of conversion to open cholecystectomy.",
-prism:publicationName: "HPB",
-prism:issn: "1365182X",
-prism:issueIdentifier: null,
-prism:coverDate: [],
-prism:coverDisplayDate: "Available online 30 August 2016",
-prism:doi: "10.1016/j.hpb.2016.07.015",
-openaccess: "0",
-openaccessArticle: false,
-openArchiveArticle: false,
-openaccessUserLicense: null,
-prism:aggregationType: "Journal",
-prism:copyright: "© 2016 International Hepato-Pancreato-Biliary Association Inc. Published by Elsevier Ltd. All rights reserved.",
-pubType: "Original article",
-pii: "S1365-182X(16)31837-8",
-authors: {
-author: [
-{
-@_fa: "true",
-given-name: "Robert P.",
-surname: "Sutcliffe"
-},
-{
-@_fa: "true",
-given-name: "Marianne",
-surname: "Hollyman"
-},
-{
-@_fa: "true",
-given-name: "James",
-surname: "Hodson"
-},
-{
-@_fa: "true",
-given-name: "Glenn",
-surname: "Bonney"
-},
-{
-@_fa: "true",
-given-name: "Ravi S.",
-surname: "Vohra"
-},
-{
-@_fa: "true",
-given-name: "Ewen A.",
-surname: "Griffiths"
-}
-]
-},
-prism:teaser: "Laparoscopic cholecystectomy is commonly performed, and several factors increase the risk of open conversion, prolonging operating time and hospital stay. Preoperative stratification would improve consent,..."
-},
+
+https://api.elsevier.com/content/search/author?query=authlast(Kurose)%20and%20authfirst(James)&insttoken=06d854b13701f22287228210264ee7b2&apiKey=7216db0161f82c6337c5f6ae7d96d05a&httpAccept=application/json
+: gives a list of James Kurose
+
+https://api.elsevier.com:80/content/search/scidir?start=0&count=5&query=specific-authkey(James Kurose)&view=COMPLETE&ver=new&insttoken=06d854b13701f22287228210264ee7b2&apiKey=7216db0161f82c6337c5f6ae7d96d05a&httpAccept=application/json
+
+https://api.elsevier.com/content/search/scidir?start=0&count=5&query=aus(James%20Kurose)+eid(9-s2.0-56976084800)&view=COMPLETE&ver=new&insttoken=06d854b13701f22287228210264ee7b2&apiKey=7216db0161f82c6337c5f6ae7d96d05a&httpAccept=application/json
+: search result is empty
+
+
+1. programCode + co-awardee
+    return a list of coawardees, []$auth
+2. given a name NameA in list []$auth
+    do
+        https://api.elsevier.com/content/search/author?query=authlast(Kurose)%20and%20authfirst(James)&insttoken=06d854b13701f22287228210264ee7b2&apiKey=7216db0161f82c6337c5f6ae7d96d05a&httpAccept=application/json
+    return a list of names with author ids.
+        NameA_1
+        NameA_2
+        NameA_3
+        ...
+        store the list in []$authorNames
+
+
+3. For each NameA_i in []$authorNames,
+    do
+        get the authorID, which is a list of digits, $authorID
+        https://www.scopus.com/authid/detail.uri?authorId=$authorID&origin=AuthorEval
+
+        https://www.scopus.com/hirsch/
+                author.uri?
+                    accessor=authorProfile
+                    &auidList=7006843462
+                    &authorName=Kurose%2c+Jim
+                    &origin=AuthorProfile
+                    &txGid=25833DA8A7E6DFF39FF0A672CDF55717.wsnAw8kcdt7IPYLO0V48gA%3a66
+
+
+Citation Overview: // this only looks for the citation of one publication via the scoupus_id of this publication.
+https://api.elsevier.com/content/abstract/
+    citations?
+        doi=10.1016%2FS0014-5793(01)03313-0
+        &apiKey=7216db0161f82c6337c5f6ae7d96d05a
+        &httpAccept=application%2Fjson

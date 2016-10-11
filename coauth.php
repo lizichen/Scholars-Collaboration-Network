@@ -1,5 +1,6 @@
 <?php
     include 'dbconnect.php';
+    include 'listCoauthors.php';
     set_time_limit(0);
     error_reporting(E_ERROR | E_PARSE);
 
@@ -16,9 +17,9 @@
         $rowcount = mysqli_num_rows($result);
         if ($rowcount > 0) {
             while ($row = $result->fetch_assoc()) {
-                $auth[] = $row;
+                $coawardeesList[] = $row;
             }
-            echo "Author count : " . count($auth);
+            echo "Author count : " . count($coawardeesList);
             echo "\r\n\r\n";
         }
         $conn->close();
@@ -27,11 +28,11 @@
     /* Go through each auth, find all matched co-authors */
     /*Using ob_start() allows you to keep the content in a servier-side buffer until you are ready to display it*/
     $mcount = 0;
-    for ($j = 0; $j < count($auth); $j++) {
-        $arow = $auth[$j];
+    for ($j = 0; $j < count($coawardeesList); $j++) {
+        $currentCoawardee = $coawardeesList[$j];
         $match = 'No Match';
 
-        $coautharr = [];
+        $coauthorArray = [];
         /*Build co-author array for current author*/
         foreach ($auth as $coarray) {
             if ($coarray["FK_Award"] == $arow["FK_Award"]) {
@@ -40,19 +41,27 @@
         }
     
         /*Build Scopus Author Search query*/
-        $auth_url = 'https://api.elsevier.com/content/search/author?query=authlast(' . urlencode($arow["LastName"]) . ')%20and%20authfirst(' . urlencode($arow["FirstName"]) . ')&insttoken=' . $insttoken . '&apiKey=' . $apiKey . '&httpAccept=application/json';
-        echo 'auth_url ---- ' . $auth_url; echo "\r\n";
+        $currentCoawardee_url = 'https://api.elsevier.com/content/search/author?query=authlast(' . urlencode($currentCoawardee["LastName"]) . ')%20and%20authfirst(' . urlencode($currentCoawardee["FirstName"]) . ')&insttoken=' . $insttoken . '&apiKey=' . $apiKey . '&httpAccept=application/json';
+        echo 'auth_url ---- ' . $currentCoawardee_url; echo "\r\n";
         $opts = array('http' => array('header' => "User-Agent:MyAgent/1.0\r\n"));
         $context = stream_context_create($opts);
-        $authorres = file_get_contents($auth_url, false, $context);
+        $authorres = file_get_contents($currentCoawardee_url, false, $context);
         $author_json = json_decode($authorres, true);
 
-        if (!empty($author_json)) {
-                    // James Kurose
+        if (!empty($author_json)) {             
                     foreach ($author_json['search-results']['entry'] as $author) {
-                        list($a, $b, $auid) = explode('-', $author['eid']);
-            //              Build Scopus co-author search query
-                        $coauthurl = 'https://api.elsevier.com/content/search/author?co-author=' . urlencode($auid) . '&insttoken=' . $insttoken . '&apiKey=' . $apiKey . '&httpAccept=application/json';
+
+                        list($a, $b, $coawardee_id) = explode('-', $author['eid']);
+            //          Build Scopus co-author search query
+
+                        $coauthors_list = listCoauthors($coawardee_id);
+                        for($i=0;$i<count($coauthors_list);$i++) {
+                            echo $coauthors_list[$i] . '<br>';
+                        }
+                        
+                        $coauthors_list = listCoauthors($coawardee_id);
+
+                        $coauthurl = 'https://api.elsevier.com/content/search/author?co-author=' . urlencode($coawardee_id) . '&insttoken=' . $insttoken . '&apiKey=' . $apiKey . '&httpAccept=application/json';
                         echo 'coauthurl ---- ' . $coauthurl;
                         echo "\r\n";
                         $opts = array('http' => array('header' => "User-Agent:MyAgent/1.0\r\n"));
@@ -62,13 +71,13 @@
 
                         /* if there is only one entry returned, then this must be the only author */
                         if (count($author_json['search-results']['entry']) == 1) {
-                            $match = $auid . ' - Single Result Match';
+                            $match = $coawardee_id . ' - Single Result Match';
                         }
                         /* THIS IS NON_SENSE, TODO: REMOVE */
-                        if (!empty($coautharr)) {
-                            for ($i = 0; $i < count($coautharr); $i++) {
+                        if (!empty($coauthorArray)) {
+                            for ($i = 0; $i < count($coauthorArray); $i++) {
             //                      Concat NSF co-author FirstName and LastName for levenshtein
-                                $cofullnsf = $coautharr[$i]['FirstName'] . " " . $coautharr[$i]['LastName'];
+                                $cofullnsf = $coauthorArray[$i]['FirstName'] . " " . $coauthorArray[$i]['LastName'];
 
                                 if (!empty($coauthor_json)) {
                                     foreach ($coauthor_json['search-results']['entry'] as $coauthor) {
@@ -78,7 +87,7 @@
                                         $similarity = lev(strtolower($cofullnsf), strtolower($cofull));
             //                              Similarity threshold = 0.4 (Good results)
                                         if ($similarity < 0.4) {
-                                            $match = $auid . ' - Co-Author Match';
+                                            $match = $coawardee_id . ' - Co-Author Match';
                                         }
             //                                        echo '<br/>NSF co full : ' . $cofullnsf . '<br/>Scopus co full : ' . $cofull . '<br/>Similarity : ' . $similarity;
                                     }
@@ -89,7 +98,7 @@
             //              Compare affiliation cities if still no match found
                         if ($match == 'No Match') {
                             //                          echo '-- In No Match if --';
-                            $awa = $arow["FK_Award"];
+                            $awa = $currentCoawardee["FK_Award"];
                             $conn = dbconnect();
                             $citysql = 'SELECT * FROM institution WHERE FK_Award = ' . $awa;
                             $cresult = $conn->query($citysql);
@@ -102,7 +111,7 @@
                             if (!empty($cname) && !empty($cname_scopus)) {
                                 $citysim = lev(strtolower($cname), strtolower($cname_scopus));
                                 if ($citysim < 0.4) {
-                                    $match = $auid . ' - Affiliation City Match';
+                                    $match = $coawardee_id . ' - Affiliation City Match';
                                 }
                             }
                             mysqli_close($conn);
@@ -110,7 +119,7 @@
                     }
         }
         // fetch author affiliation and location
-        $awa1 = $arow["FK_Award"];
+        $awa1 = $currentCoawardee["FK_Award"];
         $conn1 = dbconnect();
         $citysql1 = 'SELECT * FROM institution WHERE FK_Award = ' . $awa1;
         $cresult1 = $conn1->query($citysql1);
@@ -119,7 +128,7 @@
         if ($match != 'No Match') {
             $mcount++;
         }
-        echo 'NSF Author Name : ' . $arow["FirstName"] . " " . $arow["LastName"];
+        echo 'NSF Author Name : ' . $currentCoawardee["FirstName"] . " " . $currentCoawardee["LastName"];
         echo "\r\n";
         echo 'Scopus Author ID : ' . $match;
         echo "\r\n";
@@ -128,12 +137,7 @@
         echo 'Location : ' . $crow1["CityName"];
         echo "\r\n";
     }
+
 ?>
 
 
-
-https://api.elsevier.com/content/search/author?query=authlast(Kurose)%20and%20authfirst(James)&insttoken=06d854b13701f22287228210264ee7b2&apiKey=7216db0161f82c6337c5f6ae7d96d05a&httpAccept=application/json
-
-https://api.elsevier.com:80/content/search/scidir?start=0&count=5&query=specific-authkey(James Kurose)&view=COMPLETE&ver=new&insttoken=06d854b13701f22287228210264ee7b2&apiKey=7216db0161f82c6337c5f6ae7d96d05a&httpAccept=application/json
-
-https://api.elsevier.com/content/search/scidir?start=0&count=5&query=aus(James%20Kurose)+eid(9-s2.0-56976084800)&view=COMPLETE&ver=new&insttoken=06d854b13701f22287228210264ee7b2&apiKey=7216db0161f82c6337c5f6ae7d96d05a&httpAccept=application/json
