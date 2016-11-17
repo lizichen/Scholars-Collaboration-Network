@@ -7,11 +7,10 @@ $insttoken = '06d854b13701f22287228210264ee7b2';
 
 function dbconnect() {
 //  Set connection parameters
-    
-    
-//    $servername = "localhost";
-    $servername = "198.46.83.198"; /*Change this to localhost in production*/ 
-    
+
+//  $servername = "localhost";
+    $servername = "198.46.83.198"; /*Change this to localhost in production*/
+
     $username = "andre180_admin";
     $password = "QAZwsx!2345";
     $dbname = "andre180_awards";

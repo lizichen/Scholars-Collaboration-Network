@@ -20,7 +20,7 @@
             </form>
         </div>
         <div id="updateVersion">
-            <p>Update: Fri Sep 8, 2016</p>
+            <p>Update: Thursday Nov 3, 2016</p>
         </div>  
     </body>
 </html>
