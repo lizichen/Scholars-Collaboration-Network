@@ -1,63 +1,27 @@
 <?php
 
-include 'dbconnect.php';
-include 'listCoauthors.php';
-set_time_limit(0);
-error_reporting(E_ERROR | E_PARSE);
+// TESTING:
+// For one specific author:
+$currentCoawardee_url = 'https://api.elsevier.com/content/search/scopus?query=AU-ID(7006843462)&field=dc:identifier&count=10&httpAccept=application/json&apikey=7216db0161f82c6337c5f6ae7d96d05a';
 
-//$filename = "coauth.txt";
-//header('Content-Type: application/octet-stream');
-//header('Content-Disposition: attachment; filename=' . $filename);
+$opts = array('http' => array('header' => "User-Agent:MyAgent/1.0\r\n"));
+$context = stream_context_create($opts);
+$documents = file_get_contents($currentCoawardee_url, false, $context);
+$document_json = json_decode($documents, true);
 
-/*For a particular program code, pull all awards. For each award, pull all co-awardees. the $auth hold all co-awardees*/
-if (!empty($_COOKIE['prcode'])) {
-    $prcode = $_COOKIE['prcode'];
-    $conn = dbconnect();
-    $sql = "SELECT * FROM investigator i where i.FK_Award in (SELECT a.FK_rootTag FROM programelement pe ,award a WHERE pe.FK_award = a.FK_rootTag and pe.code = '" . $prcode . "')";
-    $result = $conn->query($sql);
-    $rowcount = mysqli_num_rows($result);
-    if ($rowcount > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $coawardeesList[] = $row;
-        }
-        echo "Author count : " . count($coawardeesList);
-        echo '<br />';
-    }
-    $conn->close();
+foreach($document_json['search-results']['entry'] as $doc) {
+    list($scopus_id_label, $scopus_id) = explode(':', $doc["dc:identifier"]);
+    $doc_url = 'https://api.elsevier.com/content/abstract/scopus_id/'
+        .$scopus_id.'?httpAccept=application/json&apikey=7216db0161f82c6337c5f6ae7d96d05a';
+    $doc_detail = file_get_contents($doc_url, false, $context);
+    $doc_json = json_decode($doc_detail, true);
+
+    $doc_title = $doc_json['abstracts-retrieval-response']['coredata']['dc:title'];
+    $doc_author_firstName = $doc_json['abstracts-retrieval-response']['coredata']['dc:creator']['author'][0]['preferred-name']['ce:given-name'];
+    $doc_author_lastName = $doc_json['abstracts-retrieval-response']['coredata']['dc:creator']['author'][0]['preferred-name']['ce:surname'];
+
+    echo $doc_title . '<br />   ' . 'Author: '.$doc_author_firstName.' '.$doc_author_lastName.'<br />';
 }
-
-    echo "Printing coawardeesList :" . print_r($coawardeesList);
-    echo '<br /><br />';
-
-    echo "testing...";
-    echo '<br /><br />';
-
-    echo "count" . count($coawardeesList);
-exit;
-    $modifiedCoawardeesList = array(); // firstname, lastname, emailaddr
-
-    for($i = 0; $i < count($coawardeesList) ; $i++){
-        $name = $coawardeesList[$i]["FirstName"] . '_' . $coawardeesList[$i]["LastName"];
-        echo $name . '<br />';
-        $modifiedCoawardeesList[$name] = $coawardeesList[$i]["EmailAddress"];
-    }
-
-    echo print_r($modifiedCoawardeesList);
-    echo '<br /><br />';
-
-    echo '$modified size:' . count($modifiedCoawardeesList);
-    echo '<br /><br />';
-
-    if (array_key_exists("Kelvin_Droegemeier", $modifiedCoawardeesList))
-    {
-        echo "Key exists!";
-    }
-    else
-    {
-        echo "Key does not exist!";
-    }
-
-
 
 
 ?>

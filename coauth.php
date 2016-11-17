@@ -109,12 +109,45 @@
 
     }
 
-    // up to now, we have all coawardee's real author id
+    echo '<br /><br />';
+    echo 'Generating Author, Publication, Co-author Relational Map....';
+    echo '<br /><br /><br />';
 
+    // now, we have all coawardee's real author id
     foreach($modifiedCoawardeesList as $name => $id){
         echo $name . ' '. $id . '<br />';
-    }
+        $currentCoawardee_url = 'https://api.elsevier.com/content/search/scopus?query=AU-ID('.$id.')&field=dc:identifier&count=10&httpAccept=application/json&apikey='.$apiKey;
+        //echo $currentCoawardee_url.'<br />';
+        $opts = array('http' => array('header' => "User-Agent:MyAgent/1.0\r\n"));
+        $context = stream_context_create($opts);
 
+        $documents = file_get_contents($currentCoawardee_url, false, $context);
+        $document_json = json_decode($documents, true);
+
+        foreach($document_json['search-results']['entry'] as $doc) {
+            list($scopus_id_label, $scopus_id) = explode(':', $doc["dc:identifier"]);
+            $doc_url = 'https://api.elsevier.com/content/abstract/scopus_id/'
+                .$scopus_id.'?httpAccept=application/json&apikey='.$apiKey;
+            //echo $doc_url.'<br />';
+            $doc_detail = file_get_contents($doc_url, false, $context);
+            $doc_json = json_decode($doc_detail, true);
+
+            $doc_title = $doc_json['abstracts-retrieval-response']['coredata']['dc:title'];
+            $doc_author_firstName = $doc_json['abstracts-retrieval-response']['coredata']['dc:creator']['author'][0]['preferred-name']['ce:given-name'];
+            $doc_author_lastName = $doc_json['abstracts-retrieval-response']['coredata']['dc:creator']['author'][0]['preferred-name']['ce:surname'];
+
+            echo 'Publication Title: '.$doc_title . '<br />   ' . ' -- Author: '.$doc_author_firstName.' '.$doc_author_lastName.'<br />';
+        }
+
+        // for each $name, get all documents
+        // we have:
+        //      $name => $id
+        // we need:
+        //      $name => $document => [a list of authors]
+        //      $name => $document => [a list of authors]
+        //      $name => $document => [a list of authors]
+        echo '<br /><br />';
+    }
 
 
 ?>
