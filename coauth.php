@@ -67,7 +67,7 @@
                                 if(strripos($anAuthor, $coawardeesList[$k]["LastName"]) > 0
                                     && strripos($anAuthor, $coawardeesList[$k]["FirstName"]) > 0 ){
                                     $hasRelation++;
-                                    echo '     Related Co-Author :' . $anAuthor . '<br />';
+                                    //echo '     Related Co-Author :' . $anAuthor . '<br />';
                                 }
                             }
                         }
@@ -116,7 +116,9 @@
     // now, we have all coawardee's real author id
     foreach($modifiedCoawardeesList as $name => $id){
         echo $name . ' '. $id . '<br />';
-        $currentCoawardee_url = 'https://api.elsevier.com/content/search/scopus?query=AU-ID('.$id.')&field=dc:identifier&count=10&httpAccept=application/json&apikey='.$apiKey;
+        echo 'Each of the following authors has been collaborated with '.$name.' on a publication. <br />';
+
+        $currentCoawardee_url = 'https://api.elsevier.com/content/search/scopus?query=AU-ID('.$id.')&field=dc:identifier&count=20&httpAccept=application/json&apikey='.$apiKey;
         //echo $currentCoawardee_url.'<br />';
         $opts = array('http' => array('header' => "User-Agent:MyAgent/1.0\r\n"));
         $context = stream_context_create($opts);
@@ -136,7 +138,8 @@
             $doc_author_firstName = $doc_json['abstracts-retrieval-response']['coredata']['dc:creator']['author'][0]['preferred-name']['ce:given-name'];
             $doc_author_lastName = $doc_json['abstracts-retrieval-response']['coredata']['dc:creator']['author'][0]['preferred-name']['ce:surname'];
 
-            echo 'Publication Title: '.$doc_title . '<br />   ' . ' -- Author: '.$doc_author_firstName.' '.$doc_author_lastName.'<br />';
+            //echo 'Publication Title: '.$doc_title . '<br />   '
+            echo $doc_author_firstName.' '.$doc_author_lastName.'<br />';
         }
 
         // for each $name, get all documents
