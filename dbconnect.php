@@ -9,11 +9,11 @@ function dbconnect() {
 //  Set connection parameters
 
 //  $servername = "localhost";
-    $servername = "198.46.83.198"; /*Change this to localhost in production*/
+    $servername = "37.60.225.115";//"198.46.83.198"; /*Change this to localhost in production*/
 
-    $username = "andre180_admin";
-    $password = "QAZwsx!2345";
-    $dbname = "andre180_awards";
+    $username = "lizic781_wp618";//"andre180_admin";
+    $password = "19901015chenlizi";
+    $dbname = "lizic781_andrews";//"andre180_awards";
     $conn = new mysqli($servername, $username, $password, $dbname);
 //  Check connection
     if ($conn->connect_error) {

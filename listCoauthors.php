@@ -7,7 +7,7 @@ function listCoauthors($Id){
     //echo $Id;
 
     $scopsUsername = "lc3397@nyu.edu";
-    $scopsPassword = "phdINusa1015";
+    $scopsPassword = "phdINusa!)15";
     $curl_postfields = "username-input=".$scopsUsername."&password-input=".$scopsPassword;
 
     $authorId = $Id; //"7202909704";

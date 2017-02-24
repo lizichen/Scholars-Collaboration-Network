@@ -39,7 +39,7 @@
 
         /*Build Scopus Author Search query*/
         $currentCoawardee_url = 'https://api.elsevier.com/content/search/author?query=authlast(' . urlencode($currentCoawardee["LastName"]) . ')%20and%20authfirst(' . urlencode($currentCoawardee["FirstName"]) . ')&insttoken=' . $insttoken . '&apiKey=' . $apiKey . '&httpAccept=application/json';
-        // echo 'auth_url ---- ' . $currentCoawardee_url . '<br /><br />';
+        echo 'auth_url ---- ' . $currentCoawardee_url . '<br /><br />';
         $opts = array('http' => array('header' => "User-Agent:MyAgent/1.0\r\n"));
         $context = stream_context_create($opts);
         $authorres = file_get_contents($currentCoawardee_url, false, $context);
@@ -54,7 +54,7 @@
 
                         list($a, $b, $coawardee_id) = explode('-', $author['eid']);
                         // Build Scopus co-author search query
-                        //echo ' #### GET A NEW POSSIBLE ID: ' . $coawardee_id . '<br />';
+                        echo ' #### GET A NEW POSSIBLE ID: ' . $coawardee_id . '<br />';
                         $coauthors_list = listCoauthors($coawardee_id);
                         //echo 'CurrentCoawardee -- LastName:' . print_r($currentCoawardee["LastName"]) . ' FirstName:' . print_r($currentCoawardee["FirstName"]) . '<br /><br />';
                         $hasRelation = 0;
