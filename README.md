@@ -33,3 +33,8 @@ Is there a way to see which papers connect to other clusters of authors/papers m
 3. number of awardees, etc., affect collaboration success and network impacts?;
 
   cross-disciplinarity might also be thought of as a factor that potentially influences success
+
+##Object Relation Diagram:
+![relationship](https://github.com/lizichen/collaboration_networks/blob/master/ObjectsRelationDiagram.jpg "Relationship Diagram")
+
+  
