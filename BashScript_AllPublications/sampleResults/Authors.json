@@ -1,0 +1,55 @@
+{
+	[
+		{
+		    "Author Name": "James, Kurose",
+		    "ScopusID": "1728391014",
+		    "AwardList": [
+		            "AwardID": "23851",
+		            "AwardID": "43932420",
+		            "AwardID": "415400",
+		            "AwardID": "43940",
+		            "AwardID": "43902"
+		    ],
+		    "Publications": [
+		    	"PublicationID": "1398792",
+		    	"PublicationID": "1398793",
+		    	"PublicationID": "1398794",
+		    	"PublicationID": "1398795"
+		    ]
+		},
+		{
+		    "Author Name": "Richard, Fergus",
+		    "ScopusID": "1728391011",
+		    "AwardList": [
+		            "AwardID": "23859",
+		            "AwardID": "439860"
+		    ],
+		    "Publications": [
+		    	"PublicationID": "439871292",
+		    	"PublicationID": "439871293",
+		    	"PublicationID": "439871294",
+		    	"PublicationID": "439871293",
+		    	"PublicationID": "439871294",
+		    	"PublicationID": "439871293",
+		    	"PublicationID": "439871294",
+		    	"PublicationID": "439871293",
+		    	"PublicationID": "439871294",
+		    	"PublicationID": "439871295"
+		    ]
+		},
+		{
+		    "Author Name": "William, Hington",
+		    "ScopusID": "1728391012",
+		    "AwardList": [
+		            "AwardID": "238513",
+		            "AwardID": "4390011",
+		            "AwardID": "4399830"
+		    ],
+		    "Publications": [
+		    	"PublicationID": "1398792",
+		    	"PublicationID": "1398793",
+		    	"PublicationID": "1398794"
+		    ]
+		}
+	]
+}
