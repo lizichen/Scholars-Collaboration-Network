@@ -6,7 +6,7 @@
 
 let COUNTER=$2
 while [ $COUNTER -lt 10 ]; read NAME
-     do curl -b ../cookies/cookies_feb28.txt "$NAME" > author_$COUNTER.html
+     do curl -b ../cookies/cookies.txt "$NAME" > author_$COUNTER.html
      sleep 0.5
      let COUNTER=COUNTER+1
 done < $1
