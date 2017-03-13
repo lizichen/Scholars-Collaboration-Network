@@ -80,15 +80,26 @@ Eventually, we will have a **Awardee-Scopus-ID-Enabled-Award-List.json** structu
 
 #### 2.Prepare the data clusters.  
 
-- **url_scopus**: A file that contains the url that has access to a csv file contains all publication details of this author.
-- **cookies.txt**: A file that contains the cookies needed to have access and download the csv.
-'''bash
-cat url_scopus | xargs curl -c cookies.txt -I
-'''
+- **/all-publications/author_publication_urls.txt**:   
+  A file that contains a list of urls, one of which has access to a csv file that contains all publication details of a certain author.
+- **/cookies/**: Directory that contains the cookies files that are needed to have access and download the csv. Currently use **cookies_feb28.txt**. 
 
-'''bash
+```sh
+cat url_scopus | xargs curl -c cookies.txt -I
+```
+
+```sh
 cat url_scopus | xargs curl -b cookies.txt > author.csv
-'''
+```
+
+Sample CSV file for all **publications** of an author:
+```text
+Authors,Title,Year,Source title,Volume,Issue,Art. No.,Page start,Page end,Page count,Cited by,DOI,Link,Document Type,Source,EID
+"Dehghan, M., Jiang, B., Seetharam, A.","On the Complexity of Optimal Request Routing Network",2016,"IEEE/ACM Transactions on Networking",,,,"","",,,10.1109/TNET.2016.2636843,"https://www.scopus.com/SampleLink.html",Article in Press,Scopus,2-s2.0-85007039888
+
+// and many lines of publication information, each line refers to one publication.
+```
+
 
 <sub><sup>**All the names and data are randomly chosen, does not mean anything related to the real scopus website or NSF programs. All data from Scopus and NSF program will NOT be published to anyone in this research.* </sup></sub>
 
