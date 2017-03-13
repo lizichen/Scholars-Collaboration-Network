@@ -46,3 +46,7 @@ Temporary Items
 *.html
 *.txt
 
+
+
+#======================= May Change before Commit!
+*.csv
