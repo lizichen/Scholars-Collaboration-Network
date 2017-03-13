@@ -74,7 +74,9 @@ This step may be done via **HDFS & MapReduce Framework** to improve time efficie
 
 Eventually, we will have a **Awardee-Scopus-ID-Enabled-Award-List.json** structured file.
 
-[img]
+##Object Relation Diagram:
+![scopus_id_for_awardee](https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/Report_and_Logs/Find_Real_Scopus_ID.jpg "Diagram to show how to get the real Scopus ID for an awardee")
+
 
 #### 2.Prepare the data clusters.  
 
@@ -91,5 +93,5 @@ cat url_scopus | xargs curl -b cookies.txt > author.csv
 <sub><sup>**All the names and data are randomly chosen, does not mean anything related to the real scopus website or NSF programs. All data from Scopus and NSF program will NOT be published to anyone in this research.* </sup></sub>
 
 [NSF]:https://www.research.gov/common/webapi/awardapisearch-v1.htm
-[get_authors_html_page]:https://github.com/lizichen/collaboration_networks/blob/master/BashScript_AllPublications/all-authors-html/get_authors_html_page.sh
-[htmltocsv]:https://github.com/lizichen/collaboration_networks/blob/master/BashScript_AllPublications/AwardeeInfoExtraction.ipynb
+[get_authors_html_page]:https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/all-authors-html/get_authors_html_page.sh
+[htmltocsv]:https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/AwardeeInfoExtraction.ipynb
