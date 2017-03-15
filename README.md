@@ -1,30 +1,31 @@
-#Key Research Questions:
-###1 .How do NSF programs vary in the extent to which they
+# Key Research Questions:
+
+### 1 .How do NSF programs vary in the extent to which they
 1. foster new collaborations
 2. strengthen existing collaborations
 3. foster/strengthen different kinds of collaborations:
      i.e. cross-disciplinary collaborations; this may not be an appropriate question for all programs, but will be for many sustainability science programs, and other programs that specifically seek to encourage collaboration across traditional disciplinary boundaries as a way of tackling “wicked”
 
-###2. Which programs foster successful collaborations as measured by
+### 2. Which programs foster successful collaborations as measured by
 1. more publications,
 2. more joint authorship,
-3. higher-ranked publications, and
+3. higher-ranked publications, **[? how to measure ?]**
 4. more highly cited publications.
 
-###3. Which programs foster the production of manuscripts that have broad implications within/beyond their field (as analyzed through network analysis and number and origin of citations)?  
+### 3. Which programs foster the production of manuscripts that have broad implications within/beyond their field (as analyzed through network analysis and number and origin of citations)?  
 1. *which papers connect to other clusters of authors/papers more effectively?*
 
-###4. Across programs, how do factors such as *the followings* affect the success and network impacts of collaborations?  
+### 4. Across programs, how do factors such as *the followings* affect the success and network impacts of collaborations?  
 1. award size/amount,
 2. geographic distribution(affiliation/universities) of co-awardees,
 3. number of awardees, etc.,
 
     **Cross-Disciplinarity might also be thought of as a factor that potentially influences success*
 
-##Object Relation Diagram:
+## Object Relation Diagram:
 ![relationship](https://github.com/lizichen/collaboration_networks/blob/master/ObjectsRelationDiagram.jpg "Relationship Diagram")
 
-##Development Log:
+## Development Log:
 - **[Oct 2016]** Design the research direction and articulate steps of development.
     + Proposed using Scopus open API for data retrieval.
     + Obtained 2015 NSF Award data and stored in MySQL.
