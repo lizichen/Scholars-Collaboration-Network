@@ -25,5 +25,12 @@
 #		26023359000 and 96043330123 are both possible awardees' scopus ids. 
 
 # Loop through a file that contains many lines of URLs:
-#a="https://www.scopus.com/author/coauthordetails.uri?authorId=
-nl all-author-scopus-ids.txt | xargs -n 2 -P 8 sh -c 'curl -b cookies_mar15.txt https://www.scopus.com/author/coauthordetails.uri?authorId="$1" > "$1".html'
+#nl all-author-scopus-ids.txt | xargs -n 2 -P 8 sh -c 'curl -b cookies_mar15.txt https://www.scopus.com/author/coauthordetails.uri?authorId="$1" > "$1".html'
+
+# Alert! -- Pause 0.7 to get less zero-byte data!
+let COUNTER=$2
+while [ $COUNTER -lt 10 ]; read NAME
+     do curl -b cookies.txt "$NAME" > author_$COUNTER.html
+     sleep 0.5
+     let COUNTER=COUNTER+1
+done < $1

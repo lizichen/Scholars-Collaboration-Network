@@ -34,6 +34,8 @@
 - **[Jan 2017]** Due to Scopus API limit calls and slowness of data retrieval, abandon the previous implementation design. Propose to bring Scopus Data to the local for speed-up and data pre-processing. 
 - **[Feb 2017]** Hack through the Scopus web request to find a non-API calling approach that can download detailed structured data to the local computer.
 - **[March 2017]** Obtain a list of all the potential awardee Scopus IDs for each awardee. Obtain lists of co-authors for each found Scopus ID. Find the exact awardee Scopus ID. (Detailed description, steps, scriptings, and diagram, please see [Data_Scrapping_And_PreProcess/README.md][datapreprocee])
-
+    + **[March 15, 2017]** Some authors do not exist in Scopus Website, the list of not-found awardee names are collected in file: **HTML_NOT_FOUND_LIST.txt** and **AWARDEES_NOT_FOUND_IN_SCOPUS.txt**
+    + **[March 16, 2017]** Due to the bash script, some requests to the Scopus Server returns zero byte html files. For all these awardee names, we have to send requests to the server again for getting the data. A list of such awardee names/id are stored in **ZERO_BYTE_HTML_LIST.txt** and **ZERO_BYTE_ID.txt** where the ID refers to the $ID used in author_$ID.html
+    + **[March 16, 2017]** Some awardees name are missing from the investigator.csv. **Verify_All_Awardees_By_Name.ipynb** is used to verify any missing awardee names. all the missing awardee names are stored in **MISSING_AWARDEES.txt**. All these awardee names have to be re-run with the script **get_authors_html_page.sh**. 
 
 [datapreprocee]:https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/README.md
