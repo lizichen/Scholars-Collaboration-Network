@@ -100,8 +100,12 @@ Authors,Title,Year,Source title,Volume,Issue,Art. No.,Page start,Page end,Page c
 // and many lines of publication information, each line refers to one publication.
 ```
 
+## About the Data in this Repository:
 
-<sub><sup>**All the names and data are randomly chosen, does not mean anything related to the real scopus website or NSF programs. All data from Scopus and NSF program will NOT be published to anyone in this research.* </sup></sub>
+**All the names and data are randomly chosen, does not mean anything related to the real scopus website or NSF programs. All data from Scopus and NSF program will NOT be published to anyone in this research.*
+
+Large Data Set is not commited in Github due to size restrain.  
+The 48134 CSV files are not checked in; however, a tar.gz compressed file **all-investigator-csv-final48134.tar.gz** (5.6 MB) is available in this Github directory.
 
 [NSF]:https://www.research.gov/common/webapi/awardapisearch-v1.htm
 [get_authors_html_page]:https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/all-authors-html/get_authors_html_page.sh
