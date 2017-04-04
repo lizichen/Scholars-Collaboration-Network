@@ -41,7 +41,7 @@
     + **[March 17, 2017]** There are 48152 unique awardee names in **investigator.csv** 16 of them have the type of name that include Jr. which results in empty search result from Scopus.
     + **[March 17, 2017]** 48134 CSV files are in the directory **all-investigator-csv-final48134**. (A back up tar.gz is created as well: *all-investigator-csv-final48134.tar.gz*) Each contains zero, one, or more possible awardee names with according Scopus ID and affiliation name(s). The next step is to get all the Scopus IDs from all the 48134 csv files. Then retrieve a co-author list (which contains at maximum 150 co-authors) for each Scopus ID.
     + **[March 31, 2017]** */Data_Scrapping_And_PreProcess/all_scopusID/GetAllScopusID.ipynb* read all the author csv files from dir */all-investigator-csv-final48134/* and get **198815** unique author Scopus IDs. (There are 203696 Scopus IDs from the 48134 files, some of them are repeated.) The 198815 unique Scopus IDs are stored in the txt file: **unique_scopus_ids.txt**
-    + **[TODO]** Use the 198815 Scopus ID to get all of the **co-author list** data. Each author will have upto **150 co-author** can be found from Scopus.
+    + **[April 4, 2017]** Use the 198815 Scopus ID to get all of the **co-author list** data. Each author will have upto **150 co-author** can be found from Scopus. All co-author list will be downloaded as *scopus_id.html*, then retrieve the **{coauthorName, coauthor_scopusID}** into *scopus_id.csv* file. Data will be stored under **all-coauthors-html/CSVs/**.
     + **[TODO]** Arrange these sets of data: (1) Awardee Name List (2) Awardee Name and Scopus ID pairs List (3) Scopus ID and Co-Author Names List
 
 
