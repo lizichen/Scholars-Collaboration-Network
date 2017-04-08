@@ -77,6 +77,9 @@ Eventually, we will have a **Awardee-Scopus-ID-Enabled-Award-List.json** structu
 ##Object Relation Diagram:
 ![scopus_id_for_awardee](https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/Report_and_Logs/Find_Real_Scopus_ID.jpg "Diagram to show how to get the real Scopus ID for an awardee")
 
+![data_level](https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/Report_and_Logs/DataLevel.jpg "Diagram to show how to get the real Scopus ID for an awardee")
+
+
 
 #### 2.Prepare the data clusters.  
 
