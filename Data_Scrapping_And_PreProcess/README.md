@@ -74,7 +74,7 @@ This step may be done via **HDFS & MapReduce Framework** to improve time efficie
 
 Eventually, we will have a **Awardee-Scopus-ID-Enabled-Award-List.json** structured file.
 
-##Object Relation Diagram:
+## Object Relation Diagram:
 ![scopus_id_for_awardee](https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/Report_and_logs/FunctionalLevel.jpg "Diagram to show how to get the real Scopus ID for an awardee")
 
 ![data_level](https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/Report_and_logs/DataLevel.jpg "Diagram to show how to get the real Scopus ID for an awardee")
