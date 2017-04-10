@@ -1,0 +1,21 @@
+
+Apache PIG Scripting Notes:
+
+
+A bag is a collection of tuples.
+A tuple is an ordered set of fields.
+A field is a piece of data.
+
+
+()	
+Tuple constructor operator − This operator is used to construct a tuple.
+(Raju, 30)
+
+{}	
+Bag constructor operator − This operator is used to construct a bag.
+{(Raju, 30), (Mohammad, 45)}
+
+[]	
+Map constructor operator − This operator is used to construct a tuple.
+[name#Raja, age#30]
+

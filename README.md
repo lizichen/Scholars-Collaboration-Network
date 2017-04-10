@@ -43,7 +43,14 @@
     + **[March 31, 2017]** */Data_Scrapping_And_PreProcess/all_scopusID/GetAllScopusID.ipynb* read all the author csv files from dir */all-investigator-csv-final48134/* and get **198815** unique author Scopus IDs. (There are 203696 Scopus IDs from the 48134 files, some of them are repeated.) The 198815 unique Scopus IDs are stored in the txt file: **unique_scopus_ids.txt**
 - **[April 2017]** In April, the major tasks will be to leverage Hadoop Ecosystem to query all request data relationship, and format result to a readable network relationship graph. **(1)**To obtain exact Scopus ID for each awardees. **(2)**To obtain all publication data info. **(3)**Migrate to HDFS. **(4)**Design Queries. **(5)**Draw network relationship graph, possibly in D3.js.
     + **[April 4, 2017]** Use the 198815 Scopus ID to get all of the **co-author list** data. Each author will have upto **150 co-author** can be found from Scopus. All co-author list will be downloaded as *scopus_id.html*, then retrieve the **{coauthorName, coauthor_scopusID}** into *scopus_id.csv* file. Data will be stored under **all-coauthors-html/CSVs/**.
-    + **[TODO]** Arrange these sets of data: (1) Awardee Name List (2) Awardee Name and Scopus ID pairs List (3) Scopus ID and Co-Author Names List
+    + **[April 7, 2017]** Have the final datasets:
+        * Data_Scrapping_And_PreProcess/original-award-data/**award.csv**
+        * Data_Scrapping_And_PreProcess/original-award-data/**CleanedInvestigator.csv**
+        * Data_Scrapping_And_PreProcess/**all-investigator-csv-final48134-merged.csv**
+        * Data_Scrapping_And_PreProcess/**coauthor_id_fn_ln.csv**
+    + **[April 9, 2017]** Feed Data into Dumbo HPC. Create **Apache PIG** scripts to do the MapReduce task.
+    + **[TODO]** Optimize the Hadoop architecture, think about using HBase, Zookeeper, and other Hadoop Ecosystem Frameworks.
+    + **[TODO]** Productionalize this project on April 25, 2017 and give presentation. 
 
 
 
