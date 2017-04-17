@@ -1,0 +1,61 @@
+PIG Command:
+
+A bag is a collection of tuples.
+A tuple is an ordered set of fields.
+A field is a piece of data.
+
+()	
+Tuple constructor operator − This operator is used to construct a tuple.
+(Raju, 30)
+
+{}	
+Bag constructor operator − This operator is used to construct a bag.
+{(Raju, 30), (Mohammad, 45)}
+
+[]	
+Map constructor operator − This operator is used to construct a tuple.
+[name#Raja, age#30]
+
+
+
+### MapReduce
+hadoop fs -mkdir <paths>
+hadoop fs -ls <args>
+hadoop fs -put /home/lizichen/test.csv  /user/lizichen/dir3/
+hadoop fs -get <hdfs_src> <localdst>
+hadoop fs -cat /user/lizichen/output/part-00000
+hadoop fs -cp /user/saurzcode/dir1/abc.txt /user/saurzcode/dir2
+hadoop fs -copyFromLocal /home/saurzcode/abc.txt  /user/saurzcode/abc.txt
+hadoop fs -copyToLocal [-ignorecrc] [-crc] URI <localdst>
+hadoop fs -mv /user/saurzcode/dir1/abc.txt /user/saurzcode/dir2
+
+hadoop fs -rm /user/saurzcode/dir1/abc.txt
+hadoop fs -rmr /user/saurzcode/
+
+hadoop fs -tail /user/saurzcode/dir1/abc.txt
+hadoop fs -du /user/saurzcode/dir1/abc.txt
+
+### Hive:
+hive -f scriptToRun.sql
+
+https://2xbbhjxc6wk3v21p62t8n4d4-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/Hortonworks.CheatSheet.SQLtoHive.pdf
+DROP TABLE [IF EXISTS] table_name;
+SELECT count(*) FROM investigator; 
+SELECT * FROM investigator WHERE firstname='James';
+SELECT DISTINCT awardid FROM investigator; 
+SELECT count(distinct firstname) FROM investigator; 
+SELECT * FROM investigator ORDER BY firstname; 
+SELECT firstname,count(firstname) FROM investigator GROUP BY firstname;
+
+-- Store the database table into a file:
+hive -e 'SELECT * FROM table_name LIMIT 2' | sed 's/[[:space:]]\+/,/g' > /home/lc3397/table_name.csv
+
+-- Move table from one database to another:
+use old_db;
+alter table table_name rename to new_db.table_name;
+
+select stddev_pop(b)
+from temp x
+join (select avg(a) as average from temp) y
+where x.a < y.average;
+

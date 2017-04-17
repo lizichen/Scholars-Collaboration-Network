@@ -51,6 +51,7 @@
     + **[April 9, 2017]** Feed Data into Dumbo HPC. Create **Apache PIG** scripts to do the MapReduce task.
     + **[TODO]** Optimize the Hadoop architecture, think about using HBase, Zookeeper, and other Hadoop Ecosystem Frameworks.
     + **[TODO]** Productionalize this project on April 25, 2017 and give presentation. 
+    + **[ISSUE]** Nicknames for the awardees should also be parsed. For example: James Kurose is not the mostly commonly used name for this author; instead, he uses Jim Kurose on the Scopus Website. However, James Kurose, is shown as a previously used name in a smaller font.
 
 
 
