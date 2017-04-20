@@ -1,0 +1,64 @@
++-------------------------------------------+--+
+|                 tab_name                  |
++-------------------------------------------+--+
+| aid_aids                                  |
+| aid_aids_cleaned                          |
+| aid_pcodesarr                             |
+| allpotentialawardeesandscopusid           | 357756
+| allpotentialawardeesandscopusid_newapr19  |
+| coauthoridandname                         |
+| investigator                              | 48147 unique (fn, ln)
+| name_scpid_aid                            |
+| pcode_awardid                             |
+| pcode_awardid_cleaned                     |
+| potentialinvestigator                     |
+| potentialscopusidandawardid               | 357756
+| result1                                   | only consider with-in award
+| result2                                   | 58460 rows 41,456(fn, ln, scpid)
+| result3                                   | with repetitions
+| scpid_aid                                 |
+| t_aid_aid                                 | Test
+| t_aid_aid_cleaned                         | Test
+| t_aid_scpidarr                            | Test
+| t_aid_scpidarr2                           | Test
+| t_result1                                 | Test
+| t_scpid_aid                               | Test
+| t_scpid_pot_scpsid                        | Test
+| t_table_a                                 | Test
++-------------------------------------------+--+
+
+## allpotentialawardeesandscopusid | allpotentialawardeesandscopusid_newapr19
++------------+------------+
+|  col_name  | data_type  |
++------------+------------+
+| firstname  | string     |
+| lastname   | string     |
+| scopusid   | string     |
+| awardid    | string     |
++------------+------------+
+
+## potentialscopusidandawardid
++-----------+------------+
+| col_name  | data_type  |
++-----------+------------+
+| scopusid  | string     |
+| awardid   | string     |
++-----------+------------+
+
+
+Problem 1:
+i.e., James vs Jim
+Nicknames and Previously Used Name should be included in the 
+all-investigator-csv-final48134-merged.csv file.
+
+Problem 2: (from result2)
+"Yuping","Huang","36552567500","16383"
+"Yuping","Huang","36727374400","16383"
+"Yuping","Huang","56908012800","16383"
+"Yuping","Huang","56911243100","16383"
+
+"Aaron","Barth","36088948300","32516"
+"Aaron","Barth","56606754800","32516"
+"Aaron","Barth","56606754800","7193"
+"Aaron","Barth","36088948300","7193"
+
