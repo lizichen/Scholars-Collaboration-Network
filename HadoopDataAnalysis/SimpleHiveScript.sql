@@ -110,13 +110,37 @@ SELECT scpid_aid.scopusid FROM scpid_aid WHERE
 allpotentialawardeesandscopusid_newapr19.awardid = scpid_aid.aid
 );
 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 -- NEXT STEP: Use Java MapReduce to Count Repetitions for each Distinct(firstname, lastname, scopusid, awardid)
 -- We will get:
 --		firstname, lastname, scopusid, awardid, repetitions
 -- Then, we pick the one that has the highest reps.
+-- 
+-- The code is in Folder /GetMostRepSID_Final_Apr24/
+-- The result CSV file is result_maxreps.csv.
+-- Sample:
+-- 			"aaron","barth","32516"	,"36088948300","14"
+-- 			"aaron","odom","20739"	,"7003997531","1"
+-- 			"adam","engler","40333"	,"7005709944","2"
+-- 			"adam","ward","41234"	,"35995977100","1"
+-- 
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------- Load result_maxreps.csv to a Hive Table ------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+-- RESULT_MAXREPS
+create table result_maxreps (firstname STRING, lastname STRING, awardid String, sid String, reps String) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+describe result_maxreps; 
+load data local inpath '/home/lc3397/result_maxreps_apr25.csv' overwrite into table result_maxreps; 
+
+
+
+
+
+
 
 ---------------------------------------------------------------------------------------------------------------------------
---------------------------------------------- Export to Files ------------------------------------------------
+---------------------------------------------------- Export to Files ------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
 -- Save the new tables into CSV files
 hive -e 'select * from lc3397.allpotentialawardeesandscopusid' | sed 's/[[:space:]]\+/,/g' > /home/lc3397/allpotentialawardeesandscopusid.csv
