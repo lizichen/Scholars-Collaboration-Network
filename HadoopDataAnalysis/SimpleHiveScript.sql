@@ -133,12 +133,6 @@ create table result_maxreps (firstname STRING, lastname STRING, awardid String, 
 describe result_maxreps; 
 load data local inpath '/home/lc3397/result_maxreps_apr25.csv' overwrite into table result_maxreps; 
 
-
-
-
-
-
-
 ---------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------- Export to Files ------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
@@ -151,6 +145,30 @@ hive -e 'select * from lc3397.allpotentialawardeesandscopusid_newapr19' | sed 's
 hive -e 'select * from lc3397.result1' | sed 's/[[:space:]]\+/,/g' > /home/lc3397/result1.csv
 hive -e 'select * from lc3397.result2' | sed 's/[[:space:]]\+/,/g' > /home/lc3397/result2.csv
 hive -e 'select * from lc3397.result3' | sed 's/[[:space:]]\+/,/g' > /home/lc3397/result3.csv
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------- Export to Files ------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+-- one pcode -> many AwardId
+select * from pcode_awardid_cleaned, result_maxreps 
+where pcode_awardid_cleaned.pcode = '"1360"' and pcode_awardid_cleaned.awardid = result_maxreps.awardid;
+
+-- pcode_awardid_cleaned.pcode	pcode_awardid_cleaned.awardid
+-- "1360"	"1032"
+-- "1360"	"11042"
+-- "1360"	"11810"
+-- "1360"	"11832"
+-- "1360"	"11850"
+-- "1360"	"11858"
+-- "1360"	"11865"
+-- "1360"	"11879"
+-- "1360"	"11883"
+-- "1360"	"11891"
+
+
+-- one awardid -> many awardees -> many awardee sid 
+
+
+
 ---------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------- TESTINGS TABLE Start with T_ ------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------
