@@ -79,8 +79,6 @@ Eventually, we will have a **Awardee-Scopus-ID-Enabled-Award-List.json** structu
 
 ![data_level](https://github.com/lizichen/collaboration_networks/blob/master/Data_Scrapping_And_PreProcess/Report_and_logs/DataLevel.jpg "Diagram to show how to get the real Scopus ID for an awardee")
 
-
-
 #### 2.Prepare the data clusters.  
 
 - **/all-publications/author_publication_urls.txt**:   
