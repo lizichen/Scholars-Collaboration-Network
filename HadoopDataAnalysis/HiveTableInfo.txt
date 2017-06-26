@@ -17,14 +17,6 @@
 | result2                                   | 58460 rows 41,456(fn, ln, scpid)
 | result3                                   | with repetitions
 | scpid_aid                                 |
-| t_aid_aid                                 | Test
-| t_aid_aid_cleaned                         | Test
-| t_aid_scpidarr                            | Test
-| t_aid_scpidarr2                           | Test
-| t_result1                                 | Test
-| t_scpid_aid                               | Test
-| t_scpid_pot_scpsid                        | Test
-| t_table_a                                 | Test
 +-------------------------------------------+--+
 
 ## allpotentialawardeesandscopusid | allpotentialawardeesandscopusid_newapr19
