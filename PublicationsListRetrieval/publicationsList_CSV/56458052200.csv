@@ -1,0 +1,494 @@
+
+<!DOCTYPE HTML>
+<html lang="en_US">
+<head>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<META NAME="verify-v1" CONTENT="M5q4CxMVJyf1WE5UwVmHfV8q3LK1vh/3qmo894V0Pqg=" >
+<META NAME= "robots" CONTENT = "NOARCHIVE, NOFOLLOW, NOINDEX">
+<META NAME="description" CONTENT="Elsevier’s Scopus, the largest abstract and citation database of peer-reviewed literature. Search and access research from the science, technology, medicine, social sciences and arts and humanities fields.">
+<META NAME="referrer" CONTENT="unsafe-url">
+<script>/*13012016*/(function() {var protocol = ('https:' == document.location.protocol ? 'https://' : 'http://');var scriptTag = document.createElement('script');scriptTag.type = 'text/javascript';scriptTag.async = true;scriptTag.src = protocol + 'cdn.optimizely.com/js/277918141.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(scriptTag, s);})();function optimizelyTimeout() {window.optimizely = window.optimizely|| [];if (!window.optimizely.data) {window.optimizely.push("timeout");}}setTimeout(optimizelyTimeout, 1000);</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><style type="text/css">
+.jsEnabled {display:none !important;}
+</style>
+<link rel="SHORTCUT ICON" href="/static/images/favicon.ico?ver=1.0">
+<link rel="stylesheet" type="text/css" media="all" href="/gzip_838806891/bundles/ScopusNoResults.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/gzip_N1298016790/bundles/ScopusLayout.css" />
+<script type="text/javascript" src="https://acw.elsevier.com/SSOCore/jawr_loader.js"></script>
+<script type="text/javascript" src="/gzip_N92088051/bundles/jquery.js" ></script>
+<script>
+if(!window.JAWR){
+jQuery(document).ready(function(){
+jQuery('#headerWrapper .CARS_panelClass #login_pop_container').css('margin-top','100px');
+var errorMsgObj = "<div id='errorMsgContainer'><span id='ariaHidden' class='hidden-label'>Alert Error message.</span><span>Scopus couldn&#39;t be completely loaded. Please check your browser, firewall or proxy configuration as explained on this <a target='_blank' title='View Scopus help files (opens in a new window)' href='https://www.scopus.com/standard/help.uri?topic=2848'>help page</a>.</span></div>";
+jQuery("header").append(errorMsgObj);
+});
+}
+</script>
+<script type="text/javascript">
+JAWR.loader.script('/bundles/jcars.js');
+JAWR.loader.style('/bundles/jcars.css', 'all');
+</script>
+<script language="javascript" type="text/javascript">
+window.$ = window.jQuery;
+</script>
+<script type="text/javascript" src="/gzip_N1606155294/bundles/remoteAccMsg.js" ></script>
+<script>
+var feMetricUrl = new Object();
+feMetricUrl = "https://els-eum.elsst.com";
+</script>
+<script type="text/javascript" src="/gzip_756217387/bundles/AllTop.js" ></script>
+<script language="javascript" type="text/javascript">
+var MendeleybookmarkletUrl = 'https://www.mendeley.com/minified/bookmarklet.js';
+writeJavaScriptCookie();
+var isPreviewPage = false;
+</script>
+<title>
+Scopus - Document search results
+</title>
+<script type="text/javascript" src="/gzip_N1846232499/bundles/SiteCatalystTop.js" ></script>
+<script type="text/javascript">
+var pageData = {
+page: {},
+visitor: {}
+};
+pageDataUtil.loadPageDataObject("false","128.122.215.51","en_US","","142623","(142623,U|19628,D|333,A|5,P|1,PL)(SCOPUS,CON|941f15918648e3456739da47a1479ba7a174gxrqa,SSO|ANON_IP,ACCESS_TYPE)",
+"ONLINE_REGISTERED","333","", "New York University");
+</script>
+<script src="//assets.adobedtm.com/376c5346e33126fdb6b2dbac81e307cbacfd7935/satelliteLib-c74074f9c1cbd68a79f7ff7103e0cdc14b7e5f41.js
+"></script>
+</head>
+<body onLoad="onBodyLoad();">
+<iframe class="displayNone" src='//acw.scopus.com/SSOCore/update?acw=941f15918648e3456739da47a1479ba7a174gxrqa%7C%24%7C9272A8809BC747920F079E71BC3177309C626F5C78D099607CE154BD5BBB6F99B740C1BC52789CC16027B9F8EF18A77BEA1233A1A83912A73FBA44D1BD4E4F2EAFE9C31A29ED2080B6DA1F7CB1786ABB&amp;utt=4525-9f0bd78dd5129ff0e059c805e8bd0ad7b55'></iframe>
+<iframe class="displayNone" src='//acw.elsevier.com/SSOCore/update?acw=941f15918648e3456739da47a1479ba7a174gxrqa%7C%24%7C9272A8809BC747920F079E71BC3177309C626F5C78D099607CE154BD5BBB6F99B740C1BC52789CC16027B9F8EF18A77BEA1233A1A83912A73FBA44D1BD4E4F2EAFE9C31A29ED2080B6DA1F7CB1786ABB&amp;utt=4525-9f0bd78dd5129ff0e059c805e8bd0ad7b55'></iframe>
+<div id="outerWrapper">
+<header>
+<div id="headerWrapper">
+<div class="hidden-label">
+<h1>
+Scopus - Document search results
+</h1>
+</div>
+<div class="skip-links">
+<a href="#skip1" title="Skip Main Navigation Links" >
+Skip Main Navigation Links
+</a>
+<a href="#skiptofooter" title="Jump to Footer">
+Jump to Footer
+</a>
+</div>
+<div id="overlay_screen" class="displayNone posAbsolute width100" onclick="overlayOutside();">&nbsp;</div>
+<div id="overlay_screen_lefttop" class="displayNone posAbsolute" onclick="overlayOutside();">&nbsp;</div>
+<div id="overlay_screen_leftbot" class="displayNone posAbsolute" onclick="overlayOutside();">&nbsp;</div>
+<div id="navigatorOverlay">&nbsp;</div>
+<div id="cib_Div_Overlay">
+<div id="cib_Overlay">
+<span id="cib_leftImg" title="">&nbsp;</span>
+<span id="cib_rightImg" title="">&nbsp;</span>
+<div class="contentMain"><div class="contentShadow"><div class="contentBorders">
+<div class="cib_Container">
+<div class="cib_Variable">
+<div class="floatL affColumn">
+<div class="txtSmaller variableRow">
+</div>
+<div class="cib_Header">
+</div>
+</div>
+<div class="floatR closeColumn" id="cibClose">
+<a href="#" 
+title='Close preview' >
+</a><span title='Close preview'
+class="pointer cibCloseButton">&nbsp;</span>	
+</div>
+<div class="clearB"></div>
+</div>
+<div class="cib_List">
+<div class="cibresultRow">
+</div>
+</div>
+<div class="cib_Footer">
+</div>
+</div>
+</div></div></div>
+</div>
+</div>
+<a name="top" id="top"></a>
+<input type="hidden" id="txGid" value="774D7B78B064D2657B92DEC68370E906.wsnAw8kcdt7IPYLO0V48gA:6390"/>
+<div id="header" class="zoomFix" title="Main Page Header">
+<script>var prs = {rt: function(label,ts) { this[label]=(ts||ts==0?ts:new Date().getTime());}};	</script>
+<div class="headerContainer pull-left no-select">
+<div class="headerTitle clear logoScopusImg">
+<div class="logoScopusImg" ><a href="/home.uri?zone=header&amp;origin=resultslist" title="Select to go to the Scopus main search page"><img src="/static/images/scopusLogoOrange.svg" alt="Select to go to the Scopus main search page"/></a></div></div>                
+<nav id="navHeader" class="pull-right">
+<ul class="navHeader headerIcons verticalAlign ">
+<div class="mainNavSect"></div><li class="floatL"><a class="displayBlock" href="/search/form.uri?zone=TopNavBar&amp;origin=resultslist" title="Search for documents, authors and affiliations." target="_top">Search</a></li><li class="floatL"><a id="sourceBrowseId" class="displayBlock" href="/sources.uri?zone=TopNavBar&amp;origin=resultslist" title="Browse or search the indexed sources/journals by title." target="_top">Sources</a></li><li class="floatL"><a class="displayBlock" href="/alert/form/MyAlerts.uri?zone=TopNavBar&amp;origin=resultslist" title="Manage your e-mail alerts." target="_top">Alerts</a></li><li class="floatL"><a class="displayBlock" href="/results/docList.uri?listId=myList&amp;origin=resultslist&amp;zone=TopNavBar" title="Manage your temporary list of documents and saved lists." target="_top">Lists</a></li><li class="helpMenuCont floatL">						
+<div id="helpMenu">
+<a href="javascript:void(0);" id="helpMenuLnk" title="Select to display help and Contact options" aria-haspopup="true"><span class="anchorText">Help</span><span class="iconNormal helpArrowDwn"></span></a>
+<div class="displayNone" id="helpMenuLnk-data">
+<div id="headerHelpLinks">
+<div class="custom-modal-arrow">
+<div class="custom-modal-top-border">
+<ul class="helpMenuList"> 		
+<li>
+<a role="menuitem" href="#" target="globalHelp" onClick="return openGlobalhelp('/standard/help.uri?zone=TopNavBar&amp;origin=resultslist&amp;topic=2369','globalHelp',760,570,0)"
+title="View Scopus help files (opens in a new window)" class="secondaryLink">
+<span class="anchorText">Help</span>
+</a>
+</li>
+<li>
+<a href="#" target="globalHelp" onClick="return openGlobalhelp('/standard/tutorial.uri?zone=TopNavBar&amp;origin=resultslist&amp;module=3703',
+'globalHelp',760,570,0)" title="Select to view tutorials (opens in a new window)">Tutorials</a>
+</li>
+<li>
+<a href="#" target="_blank" title="Contact us (opens in a new window)" onClick="return openGlobalhelp('/standard/contactForm.uri?zone=TopNavBar&amp;origin=resultslist',
+'globalHelp',760,570,0)">Contact us</a>
+</li>		
+<a class="iconSmall close pull-right help-close-icon" href="javascript:void(0);" title="Close window"><span class="hidden-label">Close</span>&nbsp;</a> 			
+<span id="help-close-placeholder" tabindex="-1"></span>   			 
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="scivalToggleLink floatL">
+<a href="https://www.scival.com" target="_blank" class="external">
+<span class="anchorText">SciVal</span>
+</a>
+</li>
+<li class="regLnk floatL">
+<div xmlns:cars="http://cars-services.elsevier.com/cars/server" class="CARS_panelClass" id="login-panel" displaystyle="">
+<div displaystyle="" id="login_page_main" class="    ">
+<div id="login_maincontroller" class="    " displaystyle=":right">
+<a id="login_reglink" displaystyle="" href="https://www.scopus.com/customer/profile/display.uri" title="Register a username and password for using alerts and other personal features">Register</a><a onclick="javascript:return CARS.submitCheck(&quot;toggleBackground,toggle&quot;,this)" href="javascript:void(0);" displaystyle="" id="login_loginlink" aria-haspopup="true" title="Login To Scopus" aria-controls="login_pop_container">
+<div class="CARS_displayNone">
+<script type="text/javascript">							if(true){							var metainfo = new CARS.metadata();							metainfo.elementId = 'login_loginlink_expand';							metainfo.action = 'toggle';							metainfo.dependency = 'login_loginlink_expand,login_loginlink_collapse,login_pop_container';							metainfo.name = 'login_loginlink_expand';							CARS_dataList.push(metainfo);							}						</script>
+</div>
+<img displaystyle=":expandImage" id="login_loginlink_expand"><div class="CARS_displayNone">
+<script type="text/javascript">							if(true){							var metainfo = new CARS.metadata();							metainfo.elementId = 'login_loginlink_collapse';							metainfo.action = 'toggle';							metainfo.dependency = 'login_loginlink_collapse,login_loginlink_expand,login_pop_container';							metainfo.name = 'login_loginlink_collapse';							CARS_dataList.push(metainfo);							}						</script>
+</div>
+<img displaystyle=":collapseImage:displaynone" id="login_loginlink_collapse">Login</a>
+<div class="CARS_displayNone">
+<script type="text/javascript">            if(true){            var metainfo = new CARS.metadata();            metainfo.elementId = 'login_loginlink';			metainfo.action = 'toggleBackground,toggle';			metainfo.dependency = 'login_pop_container';			if(metainfo.action.indexOf("toggle")!=-1){				metainfo.dependency = metainfo.dependency + "," + metainfo.elementId + "_expand," + metainfo.elementId + "_collapse";				metainfo.executeonload = '';				metainfo.togglevarid = '';				metainfo.requireddependency = '';			}			if(metainfo.action.indexOf("onchange")!=-1){				metainfo.selecttextdependency = '';				metainfo.executeonload = '';				metainfo.defaultselectvalue = '';				metainfo.togglevarid = '';				metainfo.requireddependency = '';			}            metainfo.name = '';            metainfo.validationcheck = '';			metainfo.error = '';			metainfo.togglestyle = ':background';			metainfo.togglestyleid = 'login_loginlink';            CARS_dataList.push(metainfo);            }        </script>
+</div>
+</div>
+<div class="CARS_clear"></div>
+<div id="login_pop_container" class="    " displaystyle=":paddingsmall:right:displaynone:background:border" focusrequired="true">
+<div id="login_pop_container_logform" class="    " displaystyle=":background:left:widthsmall">
+<div class="CARS_groupTitle">Login using your Elsevier credentials</div>
+<form action="https://www.scopus.com/customer/authenticate.uri" method="POST" enctype="form-data">
+<div id="login_username" displaystyle="" class="    ">
+<label for="username"><span>Username:</span></label><input type="text" name="username" id="username" aria-required="true" focusonload="true"><span displaystyle="" class="CARS_red">*</span>
+</div>
+<div id="login_password" displaystyle="" class="    ">
+<label for="login_password-password"><span>Password:</span></label><input type="password" name="password" id="login_password-password" aria-required="true"><span displaystyle="" class="CARS_red">*</span>
+</div>
+<div id="login_rem_forgot_submit" class="    " displaystyle="">
+<div displaystyle=":displayblock:paddingL120" class="    ">
+<input type="checkbox" id="login_rem_check" name="remember_flag" checked value="true" title="Remember me"><label for="login_rem_check">Remember me</label>
+</div>
+<div id="login_submit_btn" displaystyle=":displayinline:paddingL120" class="    ">
+<input type="submit" title="Login" aria-label="Login" value="Login" name="submit">
+</div>
+<a id="login_not_register" displaystyle="" href="https://www.scopus.com/customer/profile/display.uri" title="Register a username and password for using alerts and other personal features">Not Registered?<span displaystyle=":hidespan">Register a username and password for using alerts and other personal features</span></a>
+</div>
+<a id="login_forgot_pass" displaystyle=":fontverysmall:paddingL120:paddingT10" onclick="javascript:return CARS.submitCheck(&quot;openPopUp&quot;,this)" href="https://www.scopus.com/customer/reminder.uri" title="Opens in a new window." target="_popup">Forgotten your username or password?<span displaystyle=":hidespan">Opens in a new window.</span></a>
+<div class="CARS_displayNone">
+<script type="text/javascript">            if(true){            var metainfo = new CARS.metadata();            metainfo.elementId = 'login_forgot_pass';			metainfo.action = 'openPopUp';			metainfo.dependency = '';			if(metainfo.action.indexOf("toggle")!=-1){				metainfo.dependency = metainfo.dependency + "," + metainfo.elementId + "_expand," + metainfo.elementId + "_collapse";				metainfo.executeonload = '';				metainfo.togglevarid = '';				metainfo.requireddependency = '';			}			if(metainfo.action.indexOf("onchange")!=-1){				metainfo.selecttextdependency = '';				metainfo.executeonload = '';				metainfo.defaultselectvalue = '';				metainfo.togglevarid = '';				metainfo.requireddependency = '';			}            metainfo.name = '';            metainfo.validationcheck = '';			metainfo.error = '';			metainfo.togglestyle = '';			metainfo.togglestyleid = '';            CARS_dataList.push(metainfo);            }        </script>
+</div>
+<input type="hidden" name="auth_type" value="LOGIN_PASSWORD"><input type="hidden" name="http_method_name" value="POST"><input type="hidden" name="shibboleth_fence" value="true"><input type="hidden" name="isClaimingRemoteAccess" value="FALSE"><input type="hidden" name="remember_path_flag" value="false"><input type="hidden" name="path_choice" value=""><input type="hidden" name="path_choice_exists" value="false"><input type="hidden" name="acct_name" value=""><input type="hidden" name="dept_name" value=""><input type="hidden" name="PII_Req" value=""><input type="hidden" name="cars_cookie_flag" value="TRUE"><input type="hidden" name="origin" value="loginBox"><input type="hidden" name="zone" value="main">
+</form>
+</div>
+<div id="login_pop_container_socialform" class="    " displaystyle=":left:widthsmall:background">
+<form action="https://www.scopus.com/customer/authenticate.uri" method="POST" enctype="form-data">
+<a onclick="javascript:return CARS.submitCheck(&quot;submit&quot;,this,&quot;true&quot;)" href="javascript:void(0);" displaystyle="" id="login_open_athens" title="Log in using OpenAthens">OpenAthens login</a><input type="hidden" name="federation_id" value="6025"><input type="hidden" name="institution_id" value="88190"><input type="hidden" name="auth_type" value="SHIBBOLETH"><input type="hidden" name="domain_name" value="https://www.scopus.com/customer/authenticate.uri">
+</form>
+<div id="institutionAvail" class="    " displaystyle="">
+<div class="CARS_groupTitle">Login via your institution</div>
+<div id="rem-inst-choice-list" class="    " displaystyle="displayblock"></div>
+<a id="login_other_inst" displaystyle="" href="https://www.scopus.com/customer/institutionchoice.uri?shibboleth_fence=TRUE&amp;origin=loginBox&amp;zone=main" title="Other Institution login">Other Institution login</a>
+<div id="login-inst-choice-fed-inst-list" class="    " displaystyle=":displaynone">
+<div id="login-inst-choice-list" class="    " displaystyle="displayblock"></div>
+</div>
+</div>
+<div id="remotegroup" class="    " displaystyle="">
+<form action="https://www.scopus.com/customer/authenticate/manra.uri" method="POST" enctype="form-data">
+<a onclick="javascript:return CARS.submitCheck(&quot;submit&quot;,this,&quot;true&quot;)" href="javascript:void(0);" displaystyle="" id="login_remote_access" title="Apply for Remote Access">Apply for Remote Access</a>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li id="headerHamburger" class="hamburger floatL">
+<a href="javascript:void(0);" class="toggleIcon" aria-expanded = "false" title="Expand navigation/Collapse navigation"></a>
+</li>
+</ul>                
+</nav>		
+</div>
+<div class="sidebarMenu no-select">
+<div class="sidebarMenuHeader ">
+<nav class="subNav">
+<div class="user">
+<span class="pull-left userName">Guest user</span>
+<span id="spineHamburger" class="hamburger floatR">
+<a href="javascript:void(0);" class="toggleIcon" aria-expanded = "false" title="Expand navigation/Collapse navigation"></a>
+</span>
+</div>
+</nav>
+</div>
+<div class="sidebarBottom">
+<section class="otherProducts">
+<div>
+<nav class="navSection">
+<div class="loggedInUserOpt">
+<span id="carsLoginSpine"><li class="regLnk floatL"></li></span>
+<div class="clear"></div>
+<div id="CARS_SETTINGS_TEMPLATE" class="displayNone">
+</div>
+<div class="personalAccess userOptionCnt">
+<a href="javascript:void(0);" class="primaryLink limitToggle profileAccess collapsed not-signed-in-user-link" data-toggle="collapse" data-target="#profileAccessCnt" aria-expanded="false">Personal profile access<span class="iconBig collapsed-spine-icon pull-right"></span></a>
+<ul id="profileAccessCnt" class="accessOptions spineAccordianCollapsed"></ul>
+</div>			
+<div class="userOptionCnt">
+<a href="javascript:void(0);" class="primaryLink limitToggle profileAccess collapsed" aria-expanded="false">My Scopus<span class="iconBig collapsed-spine-icon pull-right"></span></a>	
+<ul id="myScopusCnt" class="accessOptions spineAccordianCollapsed">
+<li><a href="javascript:void(0);" data-type="savedSearches" class="not-signed-in-user-link">Saved searches</a></li>
+<li><a href="javascript:void(0);" data-type="alerts" class="not-signed-in-user-link">Alerts</a></li>
+<li><a href="javascript:void(0);" data-type="savedLists" class="not-signed-in-user-link">Saved lists</a></li>
+<li><a href="javascript:void(0);" data-type="groupedAuthors" class="not-signed-in-user-link">Grouped authors</a></li>
+</ul>
+</div>
+<div class="userOptionCnt">
+<a href="javascript:void(0);" class="primaryLink limitToggle profileAccess expanded" aria-expanded="true">My organization<span class="iconBig collapsed-spine-icon pull-right"></span></a>
+<ul id="broughtToYouCnt" class="accessOptions collapse in">
+<li class="scopusBanner libraryBannerCont">
+<div id="banner-top">
+<input type = "hidden" id="bannerHeaderCheck" value="available">
+<a href="http://hsl.med.nyu.edu" target="_blank">
+<img src="http://library.med.nyu.edu/graphics/publishers/nyuhsl_purple_234x60.png" border="0" alt="View institutional website (opens in a new window)" title="View institutional website (opens in a new window)">
+</a>
+</div>
+</li>
+<li class="librCatl">
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<section class="userOptions">
+<ul>
+<li>
+<a target="_blank" href="https://www.scival.com">SciVal</a>
+</li>
+<li>
+<a target="_blank" href="https://www.mendeley.com">Mendeley</a>
+</li>
+<li>
+<a target="_blank" href="https://www.elsevier.com/solutions/pure">Pure</a>
+</li>
+<li id="privacyCenter">
+<a href="javascript:void(0);" class="not-signed-in-user-link">Privacy center</a>
+</li>
+</ul>
+</section>
+</nav>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div id="userNameError" class="errorInput displayNone" role="alert">You must enter a username.</div>
+<div id="passwordError" class="errorInput displayNone" role="alert">You must enter your password.</div>
+<div class="clear"></div>
+<div class="headerToolbar">
+<h1 class="pull-left"> Document search results</h1>
+</div>
+<div class="clear"></div>   
+</div>
+</header>
+<main role="main">
+<div id="contentWrapper">
+<div id="container"> 
+<a name="skip1" id="skip1" href="#"></a>
+<div id="sciverseCanvasArea"  class="searchContent">
+<div class="paddingT10 paddingB10">
+<h2 class="errText txtLarge marginB10 zoomFix">
+This bookmarked page cannot be displayed.
+</h2>
+<p class="mainText marginB10">
+Scopus cannot re-create the page that you bookmarked.
+<br />
+To view this page, please repeat the steps that you previously took to get to this page.
+</p>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</main>
+<footer>
+<a href="#" name="skiptofooter" id="skiptofooter"></a>
+<div class="productFooter">
+<div class="productCol aboutScopusCol">
+<h2>About Scopus</h2>
+<ul>
+<li><a target="_blank" href="https://www.elsevier.com/online-tools/scopus" title='Learn more about Scopus (opens in a new window)'>What is Scopus</a></li>
+<li><a target="_blank" href="https://www.elsevier.com/online-tools/scopus/content-overview/" title='Learn more about Scopus&#039; content coverage (opens in a new window)'>Content coverage</a></li>
+<li><a target="_blank" href="https://blog.scopus.com/" title='Read the Scopus Blog (opens in a new window)'>Scopus blog</a></li>
+<li><a target="_blank" href="https://dev.elsevier.com/" title='Learn more about Scopus API&#039;s (opens in a new window)'>Scopus API</a></li>
+<li><a target="_blank" href="https://www.elsevier.com/legal/privacy-approach" title='View privacy matters page (opens in a new window)'>Privacy matters</a></li>
+</ul>
+</div>
+<div class="productCol langCol">
+<h2>Language</h2>
+<ul class="list-unstyled" id="languageSwitchList" data-currentlocale="en_US">
+<li lang="ja" >
+<a lang="ja" hreflang="ja" href="/personalization/switch/Japanese.uri?origin=&zone=footer&locale=ja_JP" target="_top" title="日本語版を表示する">
+<span class="anchorText">
+日本語に切り替える
+</span>
+</a>
+</li>
+<li lang="zh-Hans" >
+<a lang="zh-Hans" hreflang="zh-Hans" href="/personalization/switch/Chinese.uri?origin=&zone=footer&locale=zh_CN" target="_top" title="查看简体中文版本">
+<span class="anchorText">
+切换到简体中文
+</span>
+</a>
+</li>
+<li lang="zh-Hant" >
+<a lang="zh-Hant" hreflang="zh-Hant" href="/personalization/switch/Chinese.uri?origin=&zone=footer&locale=zh_TW" target="_top" title="查看繁體中文版本">
+<span class="anchorText">
+切換到繁體中文
+</span>
+</a>
+</li>
+<li lang="ru" >
+<a lang="ru" hreflang="ru" href="/personalization/switch/Russian.uri?origin=&zone=footer&locale=ru_RU" target="_top" title="Просмотр версии на русском языке">
+<span class="anchorText">
+Русский язык
+</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="productCol">
+<h2>Customer Service</h2>
+<ul>
+<li><a target="_blank" title="View Scopus help files (opens in a new window)" href="/standard/contactUs.uri?pageOrigin=footer">Help</a></li>
+<li><a target="_blank" title="Contact us (opens in a new window)" href="/standard/contactForm.uri?pageOrigin=footer">Contact us</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="companyFooter">
+<div class="companyCol elsevier"><a target="_blank" href="https://www.elsevier.com/" title="Go to the Elsevier site (opens in a new window)"><img src="/static/images/logo_Elsevier.svg" alt="Elsevier"></img></a></div>
+<div class="companyCol">
+<div>
+<div class="termsCondetions"><a target="_blank" href="https://www.elsevier.com/locate/termsandconditions" title="View the terms and conditions of Elsevier (opens in a new window)">Terms and conditions</a></div>
+<div class="privacyPolicy"><a target="_blank" href="https://www.elsevier.com/locate/privacypolicy" title="View the privacy policy of Elsevier (opens in a new window)">Privacy policy</a></div>
+</div>
+<div class="copyright"> Copyright © 2017 <a target="_blank" href="https://www.elsevier.com" title="Go to the Elsevier site (opens in a new window)">Elsevier B.V</a>. All rights reserved. Scopus® is a registered trademark of Elsevier B.V.</div>
+<div class="cookie">Cookies are set by this site. To decline them or learn more, visit our <a target="_blank" href="/standard/help.uri?topic=2964" title="See Cookie details (opens in a new window)">Cookies page</a>.</div>
+</div>
+<div class="relxLogo"><a href="http://www.relx.com" title="Go to RELX Group Homepage (Opens in a new window)" target="_blank"><img src="/static/images/relexLogo.svg" alt="RELX Group"></img></a></div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">	
+//client performance stats call.
+var originVal = "resultslist";
+var SDM = new Object;
+SDM.si = new Object;
+SDM.si.sds = "f44607d0df9f9d3f22b52a6c0c73da1413bdd56a94400d1a5fccab0fc3783991ab1335dd8dee4be763ca9d11473d425b";
+SDM.tid = "774D7B78B064D2657B92DEC68370E906.wsnAw8kcdt7IPYLO0V48gA:6390";
+SDM.ep = new Object();
+SDM.ep.prDevice = "https://els-eum.elsst.com";
+SDM.ep.urlPrefix = "http://www.scopus.com";
+SDM.ieVersion="8";
+SDM.pru = "https://els-eum.elsst.com";
+SDM.pru = window.location.protocol + SDM.pru.replace('http:','').replace('https:','');
+SDM.platform = "SC";
+SDM.pageType = "resultslist";
+SDM.pageTransKey = "Sat Aug 12 23:42:51 UTC 2017#i-0b243ee589768c08e#774D7B78B064D2657B92DEC68370E906.wsnAw8kcdt7IPYLO0V48gA:6390#774D7B78B064D2657B92DEC68370E906.wsnAw8kcdt7IPYLO0V48gA#128.122.215.51";
+SDM.sds = "941f15918648e3456739da47a1479ba7a174gxrqa";
+SDM.pf = new Object();
+SDM.cpc = "SC";
+</script>
+<script type="text/javascript" src="/gzip_N1779050517/bundles/AllBottom.js" ></script>
+<script type="text/javascript">
+jQuery(function(){
+pageDataUtil.loadFooterPageDataObject();
+});
+</script>
+</footer>
+<script type="text/javascript">
+if(document.forms['ssoregForm'] != null) {
+validateSSOREG();
+}
+</script>
+<script type="text/javascript">	
+var WAM = new Object;
+WAM.sep = "#";
+WAM.ud = "IPRANGE#19628#333#4525-9f0bd78dd5129ff0e059c805e8bd0ad7b55";
+WAM.cars = "";
+WAM.part = "";
+WAM.exportAction=function(format, info, count) {return true;};
+</script>
+<script type="text/javascript"></script>
+</div>
+<script type="text/javascript" src="/gzip_1614603919/bundles/pendoTop.js" ></script>
+<script type="text/javascript">
+var pendoData = {};
+pendoDataUtil.loadPendoDataObject("142623",
+"128.122.215.51",
+"(142623,U|19628,D|333,A|5,P|1,PL)(SCOPUS,CON|941f15918648e3456739da47a1479ba7a174gxrqa,SSO|ANON_IP,ACCESS_TYPE)",
+"ONLINE_REGISTERED",
+"en_US",
+"333",
+"New York University",
+"");
+(function(p, e, n, d, o) {
+var v, w, x, y, z;
+o = p[d] = p[d] || {};
+o._q = [];
+v = [ 'initialize', 'identify', 'updateOptions', 'pageLoad' ];
+for (w = 0, x = v.length; w < x; ++w)
+(function(m) {
+o[m] = o[m]
+|| function() {
+o._q[m === v[0] ? 'unshift' : 'push']([ m ]
+.concat([].slice.call(arguments, 0)));
+};
+})(v[w]);
+y = e.createElement(n);
+y.async = !0;
+y.src = 'https://cdn.pendo.io/agent/static/7108b796-60e0-44bd-6a6b-7313c4a99c35/pendo.js';
+z = e.getElementsByTagName(n)[0];
+z.parentNode.insertBefore(y, z);
+})(window, document, 'script', 'pendo');
+/* Call this whenever information about your visitors becomes available. 
+* Please use Strings, Numbers, or Bools for value types. */
+pendo.initialize({
+apiKey : '7108b796-60e0-44bd-6a6b-7313c4a99c35',
+visitor : {
+id : pendoData.userId,
+scopusOriginalId: pendoData.scopusOriginalId,
+ipAddress : pendoData.ipAddress,
+loginStatus : pendoData.loginStatus,
+language : pendoData.language,
+SCSessionID : pendoData.SCSessionID,
+navigatorLanguage : window.navigator.language
+},
+account : {
+id : pendoData.accountId,
+name : pendoData.accountName,
+accessType : pendoData.accessType,
+consortiumId : pendoData.consortiumId
+}
+});
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"0268925da8","agent":"","beacon":"bam.nr-data.net","applicationTime":63,"applicationID":"31454162","transactionName":"MwAGYhBYX0oEABUNXQpKN0YQUF9eJgwPEEALCQhTEBZeVwYPCAdZSwAcRg1LRRlNJCQwGw==","queueTime":0}</script></body>
+</html>
