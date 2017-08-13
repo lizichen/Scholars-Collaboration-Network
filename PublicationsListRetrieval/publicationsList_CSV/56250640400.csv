@@ -53,13 +53,15 @@ var pageData = {
 page: {},
 visitor: {}
 };
-pageDataUtil.loadPageDataObject("false","216.165.95.72","en_US","","142623","(142623,U|19628,D|333,A|5,P|1,PL)(SCOPUS,CON|bd02cecd65bf7447850853541c6035e4be3fgxrqa,SSO|ANON_IP,ACCESS_TYPE)",
+pageDataUtil.loadPageDataObject("false","128.122.215.51","en_US","","142623","(142623,U|19628,D|333,A|5,P|1,PL)(SCOPUS,CON|941f15918648e3456739da47a1479ba7a174gxrqa,SSO|ANON_IP,ACCESS_TYPE)",
 "ONLINE_REGISTERED","333","", "New York University");
 </script>
 <script src="//assets.adobedtm.com/376c5346e33126fdb6b2dbac81e307cbacfd7935/satelliteLib-c74074f9c1cbd68a79f7ff7103e0cdc14b7e5f41.js
 "></script>
 </head>
 <body onLoad="onBodyLoad();">
+<iframe class="displayNone" src='//acw.scopus.com/SSOCore/update?acw=941f15918648e3456739da47a1479ba7a174gxrqa%7C%24%7C9272A8809BC747920F079E71BC3177309C626F5C78D099607CE154BD5BBB6F99B740C1BC52789CC16027B9F8EF18A77BEA1233A1A83912A73FBA44D1BD4E4F2EAFE9C31A29ED2080B6DA1F7CB1786ABB&amp;utt=4525-9f0bd78dd5129ff0e059c805e8bd0ad7b55'></iframe>
+<iframe class="displayNone" src='//acw.elsevier.com/SSOCore/update?acw=941f15918648e3456739da47a1479ba7a174gxrqa%7C%24%7C9272A8809BC747920F079E71BC3177309C626F5C78D099607CE154BD5BBB6F99B740C1BC52789CC16027B9F8EF18A77BEA1233A1A83912A73FBA44D1BD4E4F2EAFE9C31A29ED2080B6DA1F7CB1786ABB&amp;utt=4525-9f0bd78dd5129ff0e059c805e8bd0ad7b55'></iframe>
 <div id="outerWrapper">
 <header>
 <div id="headerWrapper">
@@ -112,7 +114,7 @@ class="pointer cibCloseButton">&nbsp;</span>
 </div>
 </div>
 <a name="top" id="top"></a>
-<input type="hidden" id="txGid" value="407167E0F162EE405CD03D87F91BF93D.wsnAw8kcdt7IPYLO0V48gA:5995"/>
+<input type="hidden" id="txGid" value="774D7B78B064D2657B92DEC68370E906.wsnAw8kcdt7IPYLO0V48gA:3048"/>
 <div id="header" class="zoomFix" title="Main Page Header">
 <script>var prs = {rt: function(label,ts) { this[label]=(ts||ts==0?ts:new Date().getTime());}};	</script>
 <div class="headerContainer pull-left no-select">
@@ -401,7 +403,7 @@ var originVal = "resultslist";
 var SDM = new Object;
 SDM.si = new Object;
 SDM.si.sds = "f44607d0df9f9d3f22b52a6c0c73da1413bdd56a94400d1a5fccab0fc3783991ab1335dd8dee4be763ca9d11473d425b";
-SDM.tid = "407167E0F162EE405CD03D87F91BF93D.wsnAw8kcdt7IPYLO0V48gA:5995";
+SDM.tid = "774D7B78B064D2657B92DEC68370E906.wsnAw8kcdt7IPYLO0V48gA:3048";
 SDM.ep = new Object();
 SDM.ep.prDevice = "https://els-eum.elsst.com";
 SDM.ep.urlPrefix = "http://www.scopus.com";
@@ -410,8 +412,8 @@ SDM.pru = "https://els-eum.elsst.com";
 SDM.pru = window.location.protocol + SDM.pru.replace('http:','').replace('https:','');
 SDM.platform = "SC";
 SDM.pageType = "resultslist";
-SDM.pageTransKey = "Fri Aug 04 20:50:30 UTC 2017#i-00f628ce1070963a4#407167E0F162EE405CD03D87F91BF93D.wsnAw8kcdt7IPYLO0V48gA:5995#407167E0F162EE405CD03D87F91BF93D.wsnAw8kcdt7IPYLO0V48gA#216.165.95.72";
-SDM.sds = "bd02cecd65bf7447850853541c6035e4be3fgxrqa";
+SDM.pageTransKey = "Sat Aug 12 23:19:22 UTC 2017#i-0b243ee589768c08e#774D7B78B064D2657B92DEC68370E906.wsnAw8kcdt7IPYLO0V48gA:3048#774D7B78B064D2657B92DEC68370E906.wsnAw8kcdt7IPYLO0V48gA#128.122.215.51";
+SDM.sds = "941f15918648e3456739da47a1479ba7a174gxrqa";
 SDM.pf = new Object();
 SDM.cpc = "SC";
 </script>
@@ -430,7 +432,7 @@ validateSSOREG();
 <script type="text/javascript">	
 var WAM = new Object;
 WAM.sep = "#";
-WAM.ud = "IPRANGE#19628#333";
+WAM.ud = "IPRANGE#19628#333#4525-9f0bd78dd5129ff0e059c805e8bd0ad7b55";
 WAM.cars = "";
 WAM.part = "";
 WAM.exportAction=function(format, info, count) {return true;};
@@ -441,8 +443,8 @@ WAM.exportAction=function(format, info, count) {return true;};
 <script type="text/javascript">
 var pendoData = {};
 pendoDataUtil.loadPendoDataObject("142623",
-"216.165.95.72",
-"(142623,U|19628,D|333,A|5,P|1,PL)(SCOPUS,CON|bd02cecd65bf7447850853541c6035e4be3fgxrqa,SSO|ANON_IP,ACCESS_TYPE)",
+"128.122.215.51",
+"(142623,U|19628,D|333,A|5,P|1,PL)(SCOPUS,CON|941f15918648e3456739da47a1479ba7a174gxrqa,SSO|ANON_IP,ACCESS_TYPE)",
 "ONLINE_REGISTERED",
 "en_US",
 "333",
@@ -488,5 +490,5 @@ consortiumId : pendoData.consortiumId
 }
 });
 </script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"0268925da8","agent":"","beacon":"bam.nr-data.net","applicationTime":79,"applicationID":"31454162","transactionName":"MwAGYhBYX0oEABUNXQpKN0YQUF9eJgwPEEALCQhTEBZeVwYPCAdZSwAcRg1LRRlNJCQwGw==","queueTime":0}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"0268925da8","agent":"","beacon":"bam.nr-data.net","applicationTime":77,"applicationID":"31454162","transactionName":"MwAGYhBYX0oEABUNXQpKN0YQUF9eJgwPEEALCQhTEBZeVwYPCAdZSwAcRg1LRRlNJCQwGw==","queueTime":0}</script></body>
 </html>
