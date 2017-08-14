@@ -1,1 +1,5 @@
 Aug 4, 5pm - finishes scrapping publication csv file till the sid: 7006196756, line # 9103 of the file publication_url_list.new.txt
+
+Aug 13, 5am - publicationsList_CSV contains all the CSV files, each contains a list of all the publications of an authoer.
+
+Aug 13, 6am - https://www.scopus.com/record/display.uri?eid=[eid]&origin=resultslist is the pattern to go get the html file of a publication.
