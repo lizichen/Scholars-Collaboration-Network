@@ -3,3 +3,6 @@ Aug 4, 5pm - finishes scrapping publication csv file till the sid: 7006196756, l
 Aug 13, 5am - publicationsList_CSV contains all the CSV files, each contains a list of all the publications of an authoer.
 
 Aug 13, 6am - https://www.scopus.com/record/display.uri?eid=[eid]&origin=resultslist is the pattern to go get the html file of a publication.
+
+Aug 14, 7am - created sid_eid_to_coauthors.py - create cookies, scrap publication webpage, and extract co-authors sid (without using bs4) into csv files.
+  problem: scrapping is very time consuming - may take 600+ hours for a CPU to finish the job.
