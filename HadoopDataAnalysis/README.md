@@ -1,0 +1,1 @@
+During the first time of analyzing our scrapped data, we identified many issues caused by data quality and web scrapping. These scripts are used to clean up data, find unseen problems, and eventually filtering out batches of results. 
